@@ -44,7 +44,10 @@ class CustomAppBar extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                CircleAvatar(radius: 24.r),
+                CircleAvatar(
+                  radius: 24.r,
+                  backgroundImage: AssetImage('assets/images/user_avatar.png'),
+                ),
                 SizedBox(width: 20.w),
               ],
             ),
