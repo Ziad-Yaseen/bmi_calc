@@ -31,6 +31,8 @@ class CircleBMI extends StatelessWidget {
               color: Color(0xFFAAAAB7),
               fontSize: 12.sp,
               fontWeight: FontWeight.w700,
+              fontFamily: 'jakarta',
+              letterSpacing: 1
             ),
           ),
           Text(
@@ -39,6 +41,7 @@ class CircleBMI extends StatelessWidget {
               color: AppColors.whiteColor,
               fontSize: 60.sp,
               fontWeight: FontWeight.w800,
+              fontFamily: 'manrope',
             ),
           ),
           Row(
@@ -52,6 +55,8 @@ class CircleBMI extends StatelessWidget {
                   color: color,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w700,
+                  fontFamily: 'jakarta',
+                  letterSpacing: 1
                 ),
               ),
             ],

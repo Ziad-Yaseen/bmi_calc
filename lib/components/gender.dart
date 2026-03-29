@@ -36,7 +36,7 @@ class Gender extends StatelessWidget {
             size: 24.sp,
             color: isActive
                 ? primaryColor
-                : AppColors.whiteColor.withValues(alpha: 0.5 ),
+                : AppColors.whiteColor.withValues(alpha: 0.5),
           ),
         ),
         SizedBox(height: 12.h),
@@ -46,6 +46,8 @@ class Gender extends StatelessWidget {
             color: Color(0xFFACA9B8),
             fontSize: 14.sp,
             fontWeight: FontWeight.w400,
+            fontFamily: 'inter',
+            letterSpacing: 1.4,
           ),
         ),
       ],

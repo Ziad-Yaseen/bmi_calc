@@ -115,6 +115,8 @@ class _HomeState extends State<Home> {
                           color: Color(0xFFACA9B8),
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
+                          fontFamily: 'inter',
+                          letterSpacing: 1.4,
                         ),
                       ),
                       SizedBox(height: 24.h),
@@ -142,7 +144,7 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AddSection(
-                  title: 'Age',
+                  title: 'AGE',
                   counterNumbers: selectedAge,
                   onAdd: () => setState(() {
                     selectedAge++;
@@ -152,7 +154,7 @@ class _HomeState extends State<Home> {
                   }),
                 ),
                 AddSection(
-                  title: 'weight',
+                  title: 'WEIGHT',
                   counterNumbers: selectedWeight,
                   onAdd: () => setState(() {
                     selectedWeight++;
@@ -203,7 +205,12 @@ class _HomeState extends State<Home> {
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Text(
                     'CALCULATE',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                      fontFamily: 'manrope',
+                      color: Color(0xFF630023),
+                    ),
                   ),
                 ),
               ),

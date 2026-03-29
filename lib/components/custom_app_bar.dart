@@ -40,6 +40,7 @@ class CustomAppBar extends StatelessWidget {
                     color: AppColors.whiteColor,
                     fontSize: 20,
                     fontWeight: FontWeight.w800,
+                    fontFamily: 'manrope',
                   ),
                 ),
                 Spacer(),

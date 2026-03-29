@@ -68,7 +68,7 @@ class _ResultState extends State<Result> {
                             color: Color(0xFFAAAAB7),
                             fontSize: 14,
                             fontWeight: FontWeight.w400,
-                            letterSpacing: 1.5,
+                            fontFamily: 'jakarta',
                           ),
                         ),
                       ),
