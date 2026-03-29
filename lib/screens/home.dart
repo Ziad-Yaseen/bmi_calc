@@ -1,6 +1,7 @@
 import 'package:bmi_calc/components/add_section.dart';
 import 'package:bmi_calc/components/background.dart';
 import 'package:bmi_calc/components/custom_app_bar.dart';
+import 'package:bmi_calc/components/custom_snack_bar.dart';
 import 'package:bmi_calc/components/gender.dart';
 import 'package:bmi_calc/components/main_card.dart';
 import 'package:bmi_calc/components/tall_txt.dart';
@@ -164,11 +165,20 @@ class _HomeState extends State<Home> {
             ),
             Spacer(),
             InkWell(
-              onTap: () => Navigator.pushNamed(context, AppRoutes.result, arguments: {
-                'age' : selectedAge,
-                'height' : selectedHeight,
-                'weight' : selectedWeight,
-              }),
+              onTap: () => selectedGender == GenderType.none
+                  ? CustomSnackBar.show(
+                      context: context,
+                      message: 'Please select a gender',
+                    )
+                  : Navigator.pushNamed(
+                      context,
+                      AppRoutes.result,
+                      arguments: {
+                        'age': selectedAge,
+                        'height': selectedHeight,
+                        'weight': selectedWeight,
+                      },
+                    ),
               child: Container(
                 width: double.infinity,
                 alignment: Alignment.center,
