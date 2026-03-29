@@ -71,4 +71,16 @@ class CalculateBMI {
       return Icons.info_outline;
     }
   }
+
+  IconData getCategoryIcon() {
+    if (_bmi >= 30) {
+      return Icons.monitor_weight_outlined;
+    } else if (_bmi >= 25) {
+      return Icons.scale_outlined;
+    } else if (_bmi >= 18.5) {
+      return Icons.monitor_heart_outlined;
+    } else {
+      return Icons.restaurant_menu;
+    }
+  }
 }

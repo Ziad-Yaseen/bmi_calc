@@ -143,20 +143,32 @@ class _HomeState extends State<Home> {
                 AddSection(
                   title: 'Age',
                   counterNumbers: selectedAge,
-                  onAdd: () => selectedAge++,
-                  onRemove: () => selectedAge--,
+                  onAdd: () => setState(() {
+                    selectedAge++;
+                  }),
+                  onRemove: () => setState(() {
+                    selectedAge--;
+                  }),
                 ),
                 AddSection(
                   title: 'weight',
                   counterNumbers: selectedWeight,
-                  onAdd: () => selectedWeight++,
-                  onRemove: () => selectedWeight--,
+                  onAdd: () => setState(() {
+                    selectedWeight++;
+                  }),
+                  onRemove: () => setState(() {
+                    selectedWeight--;
+                  }),
                 ),
               ],
             ),
             Spacer(),
             InkWell(
-              onTap: () => Navigator.pushNamed(context, AppRoutes.result),
+              onTap: () => Navigator.pushNamed(context, AppRoutes.result, arguments: {
+                'age' : selectedAge,
+                'height' : selectedHeight,
+                'weight' : selectedWeight,
+              }),
               child: Container(
                 width: double.infinity,
                 alignment: Alignment.center,

@@ -8,10 +8,12 @@ class CircleBMI extends StatelessWidget {
     required this.bmi,
     required this.inCircleText,
     required this.icon,
+    required this.color,
   });
   final double bmi;
   final String inCircleText;
   final IconData icon;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -42,12 +44,12 @@ class CircleBMI extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, color: Color(0xFF00E5FF), size: 12.sp),
+              Icon(icon, color: color, size: 12.sp),
               SizedBox(width: 2.w),
               Text(
                 inCircleText,
                 style: TextStyle(
-                  color: Color(0xFF00E5FF),
+                  color: color,
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w700,
                 ),

@@ -5,9 +5,11 @@ class Description extends StatelessWidget {
     super.key,
     required this.weightDescription,
     required this.icon,
+    required this.color,
   });
   final String weightDescription;
   final IconData icon;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class Description extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         child: Row(
           children: [
-            Container(width: 5, color: const Color(0xFF00E3FD)),
+            Container(width: 5, color: color),
             const SizedBox(width: 16),
             Expanded(
               child: Column(
@@ -42,7 +44,7 @@ class Description extends StatelessWidget {
                   Text(
                     weightDescription,
                     style: TextStyle(
-                      color: Color(0xFF00E3FD),
+                      color: color,
                       fontSize: 20,
                       fontWeight: FontWeight.w700,
                     ),
@@ -52,7 +54,7 @@ class Description extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(right: 20),
-              child: Icon(icon, color: Color(0xFF00E3FD), size: 32),
+              child: Icon(icon, color: color, size: 32),
             ),
           ],
         ),

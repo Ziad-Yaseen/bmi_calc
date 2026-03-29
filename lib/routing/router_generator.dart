@@ -9,7 +9,14 @@ class RouterGenerator {
       case AppRoutes.home:
         return MaterialPageRoute(builder: (context) => Home());
       case AppRoutes.result:
-        return MaterialPageRoute(builder: (context) => Result());
+        final args = settings.arguments as Map<String, int>;
+        return MaterialPageRoute(
+          builder: (context) => Result(
+            age: args['age']!,
+            height: args['height']!,
+            weight: args['weight']!,
+          ),
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(
