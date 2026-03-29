@@ -4,6 +4,7 @@ import 'package:bmi_calc/components/custom_app_bar.dart';
 import 'package:bmi_calc/components/gender.dart';
 import 'package:bmi_calc/components/main_card.dart';
 import 'package:bmi_calc/components/tall_txt.dart';
+import 'package:bmi_calc/routing/app_routes.dart';
 import 'package:bmi_calc/styling/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -154,31 +155,34 @@ class _HomeState extends State<Home> {
               ],
             ),
             Spacer(),
-            Container(
-              width: double.infinity,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
-                ),
-                gradient: LinearGradient(
-                  colors: [Color(0xFFFF8BA0), Color(0xFFFF7290)],
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Color(0xFFFF1B6B),
-                    offset: Offset(0, 0),
-                    blurRadius: 30,
-                    spreadRadius: 0,
+            InkWell(
+              onTap: () => Navigator.pushNamed(context, AppRoutes.result),
+              child: Container(
+                width: double.infinity,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16),
                   ),
-                ],
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: Text(
-                  'CALCULATE',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                  gradient: LinearGradient(
+                    colors: [Color(0xFFFF8BA0), Color(0xFFFF7290)],
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color(0xFFFF1B6B),
+                      offset: Offset(0, 0),
+                      blurRadius: 30,
+                      spreadRadius: 0,
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Text(
+                    'CALCULATE',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                  ),
                 ),
               ),
             ),
